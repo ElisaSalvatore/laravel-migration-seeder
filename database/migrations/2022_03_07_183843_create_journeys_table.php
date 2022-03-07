@@ -15,6 +15,11 @@ class CreateJourneysTable extends Migration
     {
         Schema::create('journeys', function (Blueprint $table) {
             $table->id();
+            $table->string("category");
+            $table->string("city");
+            $table->date("startJourney");
+            $table->date("endJourney");
+            $table->text("description");
             $table->timestamps();
         });
     }
