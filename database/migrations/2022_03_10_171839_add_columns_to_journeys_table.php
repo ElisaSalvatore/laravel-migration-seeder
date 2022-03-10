@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UpdateJourneysTable extends Migration
+class AddColumnsToJourneysTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,15 +14,8 @@ class UpdateJourneysTable extends Migration
     public function up()
     {
         Schema::table('journeys', function (Blueprint $table) {
-            Schema::create('journeys', function (Blueprint $table) {
-                $table->id();
-                $table->string("category");
-                $table->string("city");
-                $table->date("startJourney");
-                $table->date("endJourney");
-                $table->text("description"); 
-                $table->timestamps();
-            });
+            $table->string("country");
+            $table->decimal("price", 4,2);
         });
     }
 

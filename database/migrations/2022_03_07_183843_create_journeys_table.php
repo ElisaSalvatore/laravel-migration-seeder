@@ -16,12 +16,10 @@ class CreateJourneysTable extends Migration
         Schema::create('journeys', function (Blueprint $table) {
             $table->id();
             $table->string("category");
-            $table->string("country");
             $table->string("city");
             $table->date("startJourney");
             $table->date("endJourney");
             $table->text("description"); 
-            $table->decimal("price", 4,2);
             $table->timestamps();
         });
     }
